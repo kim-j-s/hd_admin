@@ -1,15 +1,15 @@
 $(function() {
 	$(document).on('click', '.hd_acd_btn', function(){
 		// 각각 모두 토글
-		/*
-		if( $(this).hasClass('active') ){
-			$(this).removeClass('active');
-			$(this).next('.hmd2_dept').stop(true).slideUp(300).removeClass('active');
-		} else {
-			$(this).addClass('active');
-			$(this).next('.hmd2_dept').stop(true).slideDown(300).addClass('active');
-		}
-		*/
+		// if( $(this).hasClass('active') ){
+		// 	$(this).closest('li').removeClass('active');
+		// 	$(this).removeClass('active');
+		// 	$(this).next('.hmd2_dept').stop(true).slideUp(300).removeClass('active');
+		// } else {
+		// 	$(this).closest('li').addClass('active');
+		// 	$(this).addClass('active');
+		// 	$(this).next('.hmd2_dept').stop(true).slideDown(300).addClass('active');
+		// }
 
 		// 한개만 열기
 		if( $(this).hasClass('active') ){
