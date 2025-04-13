@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+
+@font-face {
+font-family: 'NanumBarunGothic';
+src: url('font/NanumBarunGothic.eot');
+src: url('font/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
+url('font/NanumBarunGothic.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'NanumBarunGothic';
+src: url('font/NanumBarunGothicBold.eot');
+src: url('font/NanumBarunGothicBold.eot?#iefix') format('embedded-opentype'),
+url('font/NanumBarunGothicBold.woff') format('woff');
+font-weight: bold;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'NanumGothic';
+src: url('font/NanumGothic.eot');
+src: url('font/NanumGothic.eot?#iefix') format('embedded-opentype'),
+url('font/NanumGothic.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'NanumGothic';
+src: url('font/NanumGothicBold.eot');
+src: url('font/NanumGothicBold.eot?#iefix') format('embedded-opentype'),
+url('font/NanumGothicBold.woff') format('woff');
+font-weight: bold;
+font-style: normal;
+}
+
+
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,menu,footer{margin:0;padding:0}
+body{font-size:12px;line-height:1.3em;font-family:/*NanumBarunGothic,*/"돋움",Dotum,"굴림",Gulim,"Apple SD Gothic Neo",AppleGothic,Sans-serif;}
+/*p{line-height:1.6em}*/
+
+html, body{height:100%}
+
+body{position:relative;background-color:#fff;color:#666;}
+.hide{text-indent:-9999em;display:inline-block;position:absolute;left:-99999px}
+.hide_title{text-indent:-9999em;display:inline-block;position:absolute;left:-99999px}
+.none{display:none !important}
+.disb{display:block !important}
+iframe{border:0}
+
+
+table{border-collapse:collapse;width:100%}
+img,fieldset{border:0;vertical-align:middle;}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{color:inherit;text-decoration:none}
+
+input[type=text],
+input[type=password],
+input[type=tel],
+input[type=number],
+input[type=date],
+input[type=email], 
+input[type=file], 
+input[type=search], 
+textarea{border:solid 1px #cecece;padding:0.5em 0.4em;}
+select{border:solid 1px #cecece;padding:0.2em 0.5em 0.3em 0.4em;height:2.3em;/*padding:0.3em 0.3em 0.5em 0.4em;height:2.4em;*/line-height:2.4em;}
+select, input, textarea{font-size:12px}
+caption{visibility:hidden;overflow:hidden;width:0;height:0;font-size:0;line-height:0;}
+
+input[type=text],
+input[type=tel],
+input[type=number],
+input[type=date],
+input[type=password], input[type=email], input[type=search]{color:#666}
+input[readonly=readonly], select[readonly=readonly] {background-color:#ddd !important;border:solid 1px #aaa !important;color:#242424 !important}
+input[disabled=disabled], select[disabled=disabled] {background-color:#ddd !important;border:solid 1px #aaa !important;color:#242424 !important;opacity:0.8 !important}
+input[type=radio]:disabled {background:none !important;border:1px #aaa solid !important;border-radius:100px;color:#242424 !important;opacity:0.5 !important;width:1em;height:1em;}
+ 
+input[type=radio],
+input[type=checkbox]{margin-right:0.1em;vertical-align:middle;}
+input[type=radio]{display:inline-block}
+
+input[type=radio] + label,
+input[type=checkbox] + label{margin-right:0.5em}
+input[type=checkbox]{margin-right:0.1em}
+
+/* 폼요소 디자인
+input[type="radio"], input[type="checkbox"] {width:1.1em; height:1.1em; -webkit-appearance:none;outline:0; -moz-appearance:none;outline:0;border:0}
+input[type="radio"] {background:url('../img/common/radio_off.png') no-repeat center center;background-size:1em;}
+input[type="radio"]:checked { background:url('../img/common/radio_on.png') no-repeat center center;background-size:1em;}
+input[type="checkbox"] {background:url('../img/common/check_off.png') no-repeat left top;background-size:0.99em}
+input[type="checkbox"]:checked {background:url('../img/common/check_on.png') no-repeat left top;background-size:0.99em}
+*/
+
+::-moz-placeholder{font-size:0.8em;line-height:2em;}
+::-webkit-input-placeholder{font-size:0.8em;line-height:2em;}
+table td ::-moz-placeholder{font-size:1em;line-height:1.3em}
+table td ::-webkit-input-placeholder{font-size:1em;line-height:1.3em}
+
+select, input[type="text"], input[type="password"], input[type="checkbox"], input[type="date"] {vertical-align:middle;}
+
+/* 단어 자르기 */
+.wbKa{word-break:keep-all;}
+.wbba{word-break:break-all;}
+table.wbba tr td{white-space:normal !important;}
+
+/* 코딩 가이드 설명 (이부분 차후 삭제) */
+.dumy_img{border:solid 2px red;background-color:#000; border-radius:7px;text-align:center;color:#fff;font-weight:bold;padding:10px;margin:20px}
+.dumy_code{border:solid 2px orange;background-color:silver; border-radius:7px;padding:2em 1em;margin:20px;text-align:center;}
+.dumy_code a{display:block;text-decoration:underline;color:red;margin-top:0.5em}
+
+/* ====== 예약 스타일 ====== */
+
+.pointC01 {color:#d04a00 !important;} /* 주황 */
+.pointC02 {color:#00346e !important;} /* 파랑 */
+.pointC03 {color:#e67400 !important;} /* 밝은 주황 */
+.w100p{width:100%}
+.textA01{width:100%;height:120px}
+
+/* 위치 */
+.floatL{float:left;}
+.floatR{float:right;}
+.alignL{text-align:left !important;}
+.alignC{text-align:center !important;}
+.alignR{text-align:right !important;}
+.verT{vertical-align:top !important;}
+.verM{vertical-align:middle !important;}
+.verB{vertical-align:bottom !important;}
+.overH{overflow:hidden !important}
+
+/* table 정렬(다중클래스사용) */
+table.td_center tr td{text-align:center;}
+table.td_left tr td{text-align:left;}
+table.td_right tr td{text-align:right;}
+table.th_center tr th{text-align:center;}
+table.th_left tr th{text-align:left;}
+table.th_right tr th{text-align:right;}
+table tr td.bordRnone{border-right:0}
+table tr td.bordRnone + td{border-left:0}
+
+/* 간격 */
+.mg0 {margin:0 !important;}
+.mgT0{margin-top:0px !important;}
+.mgT5{margin-top:5px !important;}
+.mgT7{margin-top:7px !important;}
+.mgT10{margin-top:10px !important;}
+.mgT15{margin-top:15px !important;}
+.mgT20{margin-top:20px !important;}
+.mgT25{margin-top:25px !important;}
+.mgT30{margin-top:30px !important;}
+.mgT35{margin-top:35px !important;}
+.mgT40{margin-top:40px !important;}
+.mgT45{margin-top:45px !important;}
+.mgT50{margin-top:50px !important;}
+.mgT100 {margin-top:100px !important;}
+.mgT120 {margin-top:120px !important;}
+
+.mgL5 {margin-left:5px !important;}
+.mgL10 {margin-left:10px !important;}
+.mgL15 {margin-left:15px !important;}
+.mgL20 {margin-left:20px !important;}
+.mgL25 {margin-left:25px !important;}
+
+.mgR5 {margin-right:5px !important;}
+.mgR10 {margin-right:10px !important;}
+
+.mgB5 {margin-bottom:5px !important;}
+.mgB10 {margin-bottom:10px !important;}
+.mgB15 {margin-bottom:15px !important;}
+.mgB20 {margin-bottom:20px !important;}
+.mgB30 {margin-bottom:30px !important;}
+
+.pd0 {padding:0 !important;}
+.pdT0 {padding-top:0 !important;}
+
+/* border 초기화 */
+.bdNone {border:0 !important;}
+.search_btn_area.bdNone {border:0 !important;padding-top:0 !important;margin-bottom:1.5em !important;}
+.bdTNone {border-top:0 !important;}
+.bdBNone {border-bottom:0 !important;}
+.bdLNone {border-left:0 !important;}
+.bdRNone {border-right:0 !important;}
+.bdTop{border-top:1px solid #bbb;}
+
+.wrap_tableN.bdNone {border:none;}
+.wrap_tableN.bdNone table th, .wrap_tableN.bdNone table td {border-top:none;}
+
+/* form 넓이 */
+.se_all{width:100%;}
+.input_all{width:95.5% !important;}
+.input_m {width:85% !important;}
+.input_s {width:25% !important;;}
+
+
+/* 폰트 굵기 */
+.fwN {font-weight:normal !important;}
+.fwB {font-weight:bold !important;}
+
+/* 텍스트 간격 */
+.ls01 {letter-spacing:-1px;}
+.ls02 {letter-spacing:-2px;}
+
+/* 폰트 크기 */
+.fs11 {font-size:11px !important;}
+.fs12 {font-size:12px !important;}
+.fs13 {font-size:13px !important;}
+.fs14 {font-size:14px !important;}
+.fs15 {font-size:15px !important;}
+
+
