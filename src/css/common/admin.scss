@@ -234,7 +234,8 @@
       display: block;
       padding: 9px 30px 9px 12px;
       border-radius: 50px;
-      border: 1px solid #CDD1D5;
+			border: 1px solid #EEF2F7;
+			background-color: #EEF2F7;
       > .text {
         display: block;
         font-size: 14px;
@@ -242,6 +243,13 @@
         color: #1E2124;
         white-space: nowrap;
       }
+			&.active {
+				border: 1px solid #CDD1D5;
+				background-color: #fff;
+				+ .hd_tab_btn_del {
+					background-image: url(/images/common/hd_bg_close.png);
+				}
+			}
     }
 
     .hd_tab_btn_del {
@@ -254,7 +262,8 @@
       font-size: 0;
       border: none;
       transform: translateY(-50%);
-      background: url(/images/common/hd_bg_close.png) no-repeat center center / 16px auto;
+      // background: url(/images/common/hd_bg_close.png) no-repeat center center / 16px auto;
+      background: url(/images/common/hd_bg_close_off.png) no-repeat center center / 16px auto;
       cursor: pointer;
     }
   }
