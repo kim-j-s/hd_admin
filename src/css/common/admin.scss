@@ -240,12 +240,15 @@
         display: block;
         font-size: 14px;
         line-height: 20px;
-        color: #1E2124;
+				color: #6D7882;
         white-space: nowrap;
       }
 			&.active {
 				border: 1px solid #CDD1D5;
 				background-color: #fff;
+				> .text {
+					color: #1E2124;
+				}
 				+ .hd_tab_btn_del {
 					background-image: url(/images/common/hd_bg_close.png);
 				}
