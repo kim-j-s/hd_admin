@@ -178,13 +178,16 @@
   padding: 0 8px;
   > li {
     position: relative;
-    > a {
+    > a,
+    > button {
       position: relative;
       display: block;
       padding-left: 8px;
       font-size: 12px;
       line-height: 18px;
       color: #58616A;
+			border: none;
+			background-color: transparent;
       transition: color 0.3s;
       &::before {
         content: '';
