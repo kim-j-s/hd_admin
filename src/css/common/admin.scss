@@ -1,300 +1,345 @@
+/* admin */
 .hd_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
   overflow: hidden;
-	button {
-		font-family: inherit;
-	}
 }
-
+.hd_wrap button {
+  font-family: inherit;
+}
 /* hd_aside */
 .hd_aside {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
   flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
-
 .hd_aside_v1 {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
   flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
-  width: 160px;
+  width: 186px;
   height: 100%;
+	background-color: #313D4C;
+	box-shadow: 0 18px 50px -10px rgba(0, 0, 0, 0.20);
 }
-
 .hd_menu_dept_lv1 {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
   flex: 1 1 0;
   overflow: auto;
-  > li {
-    > .hd_menu_dept_lv1_btn {
-      display: block;
-      width: 100%;
-      text-align: left;
-      background-color: #fff;
-      border: none;
-      border-top: 1px solid #fff;
-      transition: all 0.3s;
-      cursor: pointer;
-      > .text {
-        display: block;
-        padding: 16px;
-        font-size: 14px;
-        line-height: 20px;
-        color: #1E2124;
-      }
-      &.active,
-      &:hover {
-        border-top: 1px solid #1E2124;
-        background-color: #1E2124;
-        > .text {
-          font-weight: 700;
-          color: #fff;
-        }
-      }
-    }
-    + li {
-      > .hd_menu_dept_lv1_btn {
-        border-top: 1px solid #CDD1D5;
-      }
-    }
-  }
+}
+.hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-top: 1px solid #fff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+	background-color: transparent;
+}
+.hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn > .text {
+  display: block;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 20px;
+  // color: #1e2124;
+	color: #fff;
+	background-repeat: no-repeat;
+	background-position: right center;
+	transition: background-color 0.3s;
+}
+.hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn.active,
+.hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn:hover {
+  border-top: 1px solid #1e2124;
+  background-color: #1e2124;
+}
+.hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn.active > .text,
+.hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn:hover > .text {
+  font-weight: 700;
+  color: #fff;
+	background-color: #FF7F32;
+	background-image: url(../images/common/bg_hd_menu_dept_lv1_btn.png);
+}
+.hd_menu_dept_lv1 > li + li > .hd_menu_dept_lv1_btn {
+  border-top: 1px solid #cdd1d5;
 }
 .hd_utils {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
   flex: none;
   padding: 16px;
-  .hd_utils_logo {
-    display: block;
-    font-size: 0;
-    img {
-      display: block;
-    }
-  }
-  .hd_utils_user {
-    padding: 16px 0;
-    font-size: 14px;
-    color: #464C53;
-    line-height: 20px;
-    > strong {
-      font-weight: 700;
-      color: #E25A37;
-    }
-  }
-  .hd_utils_logout {
-    font-size: 0;
-    .btn_logout {
-      display: inline-block;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      > .text {
-        display: block;
-        padding: 2px 10px;
-        font-weight: 400;
-        font-size: 12px;
-        line-height: 18px;
-        border-radius: 10px;
-        border: 1px solid #B1B8BE;
-        background-color: #fff;
-      }
-    }
-
-  }
 }
-
+.hd_utils .hd_utils_logo {
+  display: block;
+  font-size: 0;
+}
+.hd_utils .hd_utils_logo img {
+  display: block;
+}
+.hd_utils .hd_utils_user {
+  padding: 16px 0;
+  font-size: 14px;
+  color: #464c53;
+  line-height: 20px;
+}
+.hd_utils .hd_utils_user > strong {
+  font-weight: 700;
+  color: #e25a37;
+}
+.hd_utils .hd_utils_logout {
+  font-size: 0;
+}
+.hd_utils .hd_utils_logout .btn_logout {
+  display: inline-block;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.hd_utils .hd_utils_logout .btn_logout > .text {
+  display: block;
+  padding: 2px 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  border-radius: 10px;
+  border: 1px solid #b1b8be;
+  background-color: #fff;
+}
 .hd_aside_v2 {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
   flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 190px;
   height: 100%;
   padding: 0 16px;
   overflow: auto;
-  background-color: #F4F5F6;
+  background-color: #f4f5f6;
 }
-
-.hd_menu_dept_lv2 {
-  > li {
-    padding-bottom: 0;
-    transition: padding-bottom 0.3s;
-    .hd_acd_btn {
-      display: block;
-      width: 100%;
-      border: none;
-      background-color: transparent;
-      border-top: 1px solid #F4F5F6;
-      transition: all 0.3s;
-      cursor: pointer;
-      > .text {
-        position: relative;
-        display: block;
-				padding: 12px 20px 12px 0;
-        font-weight: 400;
-        font-size: 14px;
-        color: #1E2124;
-        line-height: 20px;
-        text-align: left;
-        &::before {
-          content: '';
-          position: absolute;
-          top: calc(50% - 1px);
-          right: 0;
-          width: 10px;
-          border-bottom: 2px solid #464C53;
-        }
-        &::after {
-          content: '';
-          position: absolute;
-          top: calc(50% - 1px);
-          right: 0;
-          width: 10px;
-          border-bottom: 2px solid #464C53;
-          transform: rotate(90deg);
-          transition: all 0.3s;
-        }
-      }
-      &.active {
-        > .text {
-          font-weight: 700;
-          &::after {
-            transform: rotate(0deg);
-          }
-        }
-      }
-			&.hd_acd_btn_open {
-				> .text {
-					padding-right: 0;
-				}
-				&::before,
-				&::after {
-					content: none;
-				}
-			}
-    }
-    + li {
-      .hd_acd_btn {
-        border-top: 1px solid #CDD1D5;
-      }
-    }
-    &.active {
-      padding-bottom: 12px;
-    }
-  }
-
-
+.hd_menu_dept_lv2 > li {
+  padding-bottom: 0;
+  -webkit-transition: padding-bottom 0.3s;
+  transition: padding-bottom 0.3s;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-top: 1px solid #f4f5f6;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn > .text {
+  position: relative;
+  display: block;
+  padding: 12px 0;
+  padding: 12px 20px 12px 0;
+  font-weight: 400;
+  font-size: 14px;
+  color: #1e2124;
+  line-height: 20px;
+  text-align: left;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn > .text::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  width: 10px;
+  border-bottom: 2px solid #464c53;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn > .text::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 0;
+  width: 10px;
+  border-bottom: 2px solid #464c53;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn.active > .text {
+  font-weight: 700;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn.active > .text::after {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn.hd_acd_btn_open > .text {
+  padding-right: 0;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn.hd_acd_btn_open > .text::before {
+  content: none;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn.hd_acd_btn_open > .text::after {
+  content: none;
+}
+.hd_menu_dept_lv2 > li + li .hd_acd_btn {
+  border-top: 1px solid #cdd1d5;
+}
+.hd_menu_dept_lv2 > li.active {
+  padding-bottom: 12px;
 }
 .hmd2_dept {
   display: none;
   padding: 0 8px;
-  > li {
-    position: relative;
-    > a,
-    > button {
-      position: relative;
-      display: block;
-      padding-left: 8px;
-      font-size: 12px;
-      line-height: 18px;
-      color: #58616A;
-			border: none;
-			background-color: transparent;
-      transition: color 0.3s;
-			cursor: pointer;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 8px;
-        left: 0;
-        width: 2px;
-        border-bottom: 2px solid #58616A;
-        border-radius: 50%;
-        transition: border-bottom 0.3s;
-      }
-      &:hover,
-      &.active {
-        font-weight: 700;
-        color: #F8633C;
-        &::before {
-          background-color: #F8633C;
-        }
-      }
-    }
-    + li {
-      margin-top: 12px;
-    }
-  }
-
+}
+.hmd2_dept > li {
+  position: relative;
+}
+.hmd2_dept > li > a,
+.hmd2_dept > li > button {
+  position: relative;
+  display: block;
+  padding-left: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #58616a;
+  border: none;
+  background-color: transparent;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  cursor: pointer;
+}
+.hmd2_dept > li > a::before,
+.hmd2_dept > li > button::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  width: 2px;
+  border-bottom: 2px solid #58616a;
+  border-radius: 50%;
+  -webkit-transition: border-bottom 0.3s;
+  transition: border-bottom 0.3s;
+}
+.hmd2_dept > li > a:hover,
+.hmd2_dept > li > a.active,
+.hmd2_dept > li > button:hover,
+.hmd2_dept > li > button.active {
+  font-weight: 700;
+  color: #f8633c;
+}
+.hmd2_dept > li > a:hover::before,
+.hmd2_dept > li > a.active::before,
+.hmd2_dept > li > button:hover::before,
+.hmd2_dept > li > button.active::before {
+  background-color: #f8633c;
+}
+.hmd2_dept > li + li {
+  margin-top: 12px;
 }
 /* hd_aside */
-
-
-
 /* hd_container */
 .hd_container {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
   flex: 1 1 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   padding: 0 32px;
-  .hd_container_tabarea {
-    flex: none;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 8px;
-    padding: 16px 0;
-
-    .hd_container_tabarea_item {
-      position: relative;
-    }
-    .hd_tab_btn {
-      flex: none;
-      position: relative;
-      display: block;
-      padding: 9px 30px 9px 12px;
-      border-radius: 50px;
-			border: 1px solid #EEF2F7;
-			background-color: #EEF2F7;
-      > .text {
-        display: block;
-        font-size: 14px;
-        line-height: 20px;
-				color: #6D7882;
-        white-space: nowrap;
-      }
-			&.active {
-				/* 눈에 너무 안띄어서 주황색 테두리로 변경해봄. (3depth 메뉴 hover시 텍스트 주황색으로 바뀌는 색과 동일한 색임) */
-				/* border: 1px solid #cdd1d5; */
-				border: 1px solid #f8633c;
-				background-color: #fff;
-				> .text {
-					color: #1E2124;
-				}
-				+ .hd_tab_btn_del {
-					background-image: url(/images/common/hd_bg_close.png);
-				}
-			}
-    }
-
-    .hd_tab_btn_del {
-      position: absolute;
-      top: 50%;
-      right: 12px;
-      z-index: 1;
-      width: 16px;
-      height: 16px;
-      font-size: 0;
-      border: none;
-      transform: translateY(-50%);
-      background: url(/images/common/hd_bg_close_off.png) no-repeat center center / 16px auto;
-      cursor: pointer;
-    }
-  }
-
-  .hd_container_content {
-    flex: 1 1 0;
-		margin-bottom: 30px;
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  }
+}
+.hd_container .hd_container_tabarea {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  gap: 8px;
+  padding: 16px 0;
+}
+.hd_container .hd_container_tabarea .hd_container_tabarea_item {
+  position: relative;
+}
+.hd_container .hd_container_tabarea .hd_tab_btn {
+  -webkit-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+  position: relative;
+  display: block;
+  padding: 9px 30px 9px 12px;
+  border-radius: 50px;
+  border: 1px solid #eef2f7;
+  background-color: #eef2f7;
+}
+.hd_container .hd_container_tabarea .hd_tab_btn > .text {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d7882;
+  white-space: nowrap;
+}
+.hd_container .hd_container_tabarea .hd_tab_btn.active {
+/*눈에 너무 안띄어서 주황색 테두리로 변경해봄. (3depth 메뉴 hover시 텍스트 주황색으로 바뀌는 색과 동일한 색임)*/
+/*   border: 1px solid #cdd1d5; */
+  border: 1px solid #f8633c;
+  background-color: #fff;
+}
+.hd_container .hd_container_tabarea .hd_tab_btn.active > .text {
+  color: #1e2124;
+}
+.hd_container .hd_container_tabarea .hd_tab_btn.active + .hd_tab_btn_del {
+  background-image: url(/images/common/hd_bg_close.png);
+}
+.hd_container .hd_container_tabarea .hd_tab_btn_del {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  font-size: 0;
+  border: none;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background: url(/images/common/hd_bg_close_off.png) no-repeat center center/16px auto;
+  cursor: pointer;
+}
+.hd_container .hd_container_content {
+  margin-bottom: 30px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 0px;
+  flex: 1 1 0;
+}
+.hd_container .hd_container_content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 /* hd_container */
+
+
