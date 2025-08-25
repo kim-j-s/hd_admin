@@ -104,7 +104,7 @@
   flex: none;
   display: flex;
   flex-direction: column;
-  width: 160px;
+  width: 190px;
   height: 100%;
   padding: 0 16px;
   overflow: auto;
@@ -118,7 +118,6 @@
     .hd_acd_btn {
       display: block;
       width: 100%;
-      // font-weight: 400;
       border: none;
       background-color: transparent;
       border-top: 1px solid #F4F5F6;
@@ -127,7 +126,7 @@
       > .text {
         position: relative;
         display: block;
-        padding: 12px 0;
+				padding: 12px 20px 12px 0;
         font-weight: 400;
         font-size: 14px;
         color: #1E2124;
@@ -160,6 +159,15 @@
           }
         }
       }
+			&.hd_acd_btn_open {
+				> .text {
+					padding-right: 0;
+				}
+				&::before,
+				&::after {
+					content: none;
+				}
+			}
     }
     + li {
       .hd_acd_btn {
@@ -189,6 +197,7 @@
 			border: none;
 			background-color: transparent;
       transition: color 0.3s;
+			cursor: pointer;
       &::before {
         content: '';
         position: absolute;
@@ -250,7 +259,9 @@
         white-space: nowrap;
       }
 			&.active {
-				border: 1px solid #CDD1D5;
+				/* 눈에 너무 안띄어서 주황색 테두리로 변경해봄. (3depth 메뉴 hover시 텍스트 주황색으로 바뀌는 색과 동일한 색임) */
+				/* border: 1px solid #cdd1d5; */
+				border: 1px solid #f8633c;
 				background-color: #fff;
 				> .text {
 					color: #1E2124;
@@ -271,7 +282,6 @@
       font-size: 0;
       border: none;
       transform: translateY(-50%);
-      // background: url(/images/common/hd_bg_close.png) no-repeat center center / 16px auto;
       background: url(/images/common/hd_bg_close_off.png) no-repeat center center / 16px auto;
       cursor: pointer;
     }
@@ -279,7 +289,7 @@
 
   .hd_container_content {
     flex: 1 1 0;
-    // overflow: auto;
+		margin-bottom: 30px;
     iframe {
       width: 100%;
       height: 100%;

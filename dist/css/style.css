@@ -913,10 +913,12 @@ table tr td.bordRnone + td {
 	color: darkblue;
 }
 
+/* #contents{float:left;min-height:300px;width:770px}  // 2025-04-18 김재섭 부장님 요청으로 width값 삭제*/
+
+/* #contents{float:left;min-height:300px;} //2025-04-21 float left로 화면이 좁게 출력되는 현상이 발생해 김재섭 부장님의 임시조치 (화면 선작업 이후 css 전체적으로 개선 예정)*/
+
 #contents {
-	float: left;
 	min-height: 300px;
-	width: 770px;
 }
 
 #footer {
@@ -1005,10 +1007,10 @@ table tr td.bordRnone + td {
 }
 
 .location {
-	text-align: right;
+	text-align: left;
 	color: #a3a3a3;
-	font-size: 11px;
-	padding: 12px 0 28px 0;
+	font-size: 12px;
+	padding: 0 0 2px 0;
 }
 
 .location span {
@@ -1019,12 +1021,14 @@ table tr td.bordRnone + td {
 	color: #444;
 }
 
+/* .tit_dep1{font-size:18px;font-weight:bold;padding:1px 0 8px 0;line-height:1em;margin-bottom:30px;border-bottom:solid 2px #8c8c8c;color:#333;} main.jsp에서 h3 영역을 공통으로 관리하며 margin-bottom:30px -> 15px 수정*/
+
 .tit_dep1 {
 	font-size: 18px;
 	font-weight: bold;
 	padding: 1px 0 8px 0;
 	line-height: 1em;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	border-bottom: solid 2px #8c8c8c;
 	color: #333;
 }
@@ -1110,15 +1114,16 @@ a.underlink:hover {
 
 .notice_list {
 	margin-top: 12px;
-	color: #666;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #d1d0ce;
 }
 
 .notice_list thead th,
 .notice_list tbody th {
-	border-top: solid 1px #999;
-	border-bottom: solid 1px #bababa;
-	background: url("/images/common/bg_table_col.gif") no-repeat left center #f5f5f5;
-	color: #333;
+	border-bottom: 1px solid #d1d0ce;
+	border-left: 1px solid #d1d0ce;
+	background: #f3f4f6;
+	color: #111;
 }
 
 .notice_list tbody th label {
@@ -1141,12 +1146,19 @@ a.underlink:hover {
 }
 
 .notice_list thead th:first-child {
-	background-image: none;
+	border-left: 0;
 }
 
 .notice_list tbody td {
+	border-bottom: 1px solid #d1d0ce;
+	border-left: 1px solid #d1d0ce;
+	line-height: 22px;
 	text-align: center;
-	border-bottom: solid 1px #e1e1e1;
+	word-break: break-word;
+}
+
+.notice_list tbody td:first-child {
+	border-left: 0;
 }
 
 .notice_list tbody td.subject {
@@ -1252,19 +1264,21 @@ table td * {
 }
 
 .tblCol2 {
-	border: 1px solid #e1e1e1;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #d1d0ce;
 }
 
 .tblCol2 th,
 .tblCol2 td {
 	padding: 11px 5px 10px;
 	text-align: center;
-	border: 1px solid #e1e1e1;
 }
 
 .tblCol2 th {
-	background: #f5f5f5;
-	color: #555;
+	border-bottom: 1px solid #d1d0ce;
+	border-left: 1px solid #d1d0ce;
+	background: #f3f4f6;
+	color: #111;
 }
 
 .tblCol2 th:first-child {
@@ -1302,13 +1316,72 @@ table td * {
 	font-weight: bold;
 }
 
+.tblCol3 {
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #d1d0ce;
+}
+
+.tblCol3 th,
+.tblCol3 td {
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+}
+
+.tblCol3 th {
+	border-bottom: 1px solid #d1d0ce;
+	border-left: 1px solid #d1d0ce;
+	background: #f3f4f6;
+	color: #111;
+}
+
+.tblCol3 th:first-child {
+	border-left: 0;
+}
+
+.tblCol3 tr th.bdL,
+.tblCol3 tr td.bdL {
+	border-left: 1px solid #e1e1e1;
+}
+
+.tblCol3 td {
+	padding: 11px 10px 10px;
+	border-left: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.tblCol3 td:first-child {
+	border-left: 0;
+}
+
+.tblCol3.alL td {
+	text-align: left;
+}
+
+.tblCol3 .bgGray th,
+.tblCol3 td.bgGray {
+	background: #fafafa;
+	color: #666;
+}
+
+.tblCol3 tfoot td {
+	background: #f5f5f5;
+	color: #555;
+	font-weight: bold;
+}
+
 .table_input.tblRow {
 	margin-bottom: 0;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #d1d0ce;
 }
 
 .table_input.tblRow th,
 .table_input.tblCont td {
 	padding: 1.1em 1em;
+	border-bottom: 1px solid #d1d0ce;
+	border-left: 1px solid #d1d0ce;
+	background: #f3f4f6;
+	color: #111;
 }
 
 .table_input.tblRow td label {
@@ -1813,6 +1886,19 @@ input:checked + .ynSwitch::before {
 	padding: 0 8px;
 }
 
+.btnType.btn07 {
+	margin-top: 2px;
+	padding-left: 3px;
+	background-position: 0 -84px;
+}
+
+.btnType.btn07 a {
+	padding: 3px 16px 4px 8px;
+	background-position: right -84px;
+	font-size: 11px;
+	letter-spacing: -1px;
+}
+
 /* 리스트 */
 
 ol.olType01 li {
@@ -2255,6 +2341,12 @@ ol.olType01 li span:first-child {
 	opacity: 0.3;
 }
 
+.layerPop.sizeS4 {
+	width: 337px;
+	height: 450px;
+	margin-left: -370px;
+}
+
 .layerPop.sizeS3 {
 	width: 337px;
 	height: 450px;
@@ -2509,19 +2601,21 @@ table.aHover td a:focus {
 }
 
 .tblCol2 {
-	border: 1px solid #e1e1e1;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #d1d0ce;
 }
 
 .tblCol2 th,
 .tblCol2 td {
 	padding: 11px 5px 10px;
 	text-align: center;
-	border: 1px solid #e1e1e1;
 }
 
 .tblCol2 th {
-	background: #f5f5f5;
-	color: #555;
+	border-bottom: 1px solid #d1d0ce;
+	border-left: 1px solid #d1d0ce;
+	background: #f3f4f6;
+	color: #111;
 }
 
 .tblCol2 th:first-child {
@@ -2843,10 +2937,8 @@ hr {
 
 /* 조건검색 */
 
-/* .wrap_board_search {padding:10px; 0 8px;background-color:#fbfbfb;border:1px solid #f0f0f0;} */
-
 .wrap_board_search {
-	padding: 10px;
+	padding: 10px 0 8px;
 	background-color: #fbfbfb;
 	border: 1px solid #f0f0f0;
 }
@@ -2861,8 +2953,9 @@ hr {
 	margin: 5px 0 10px 10px;
 }
 
+/* .board_search .search_form {width:700px;margin:0 auto;overflow:hidden;}  // 2025-04-18 김재섭 부장님 요청으로 width값 삭제*/
+
 .board_search .search_form {
-	width: 700px;
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -3152,6 +3245,79 @@ hr {
 }
 
 .fileUpload .fileThumb p {
+	float: left;
+	margin-right: 10px;
+}
+
+/* 이미지 파일 등록 */
+
+.fileUploadImg {
+	display: table;
+	text-align: left;
+	margin: 3px 0;
+}
+
+.fileUploadImg .file {
+	margin-top: 20px;
+	padding: 15px 0 20px;
+	overflow: hidden;
+	background: #f6f6f6;
+	text-align: center;
+}
+
+.fileUploadImg .fileWrap {
+	position: relative;
+	display: table-cell;
+	overflow: hidden;
+	width: 565px;
+}
+
+.fileUploadImg .btnWrap {
+	display: table-cell;
+	padding-left: 10px;
+}
+
+.fileUploadImg input[disabled="disabled"].fileText {
+	background-color: #fff !important;
+}
+
+.fileUploadImg .fileText {
+	float: left;
+	width: 490px;
+	margin-right: 3px;
+	border: 1px solid #d5d5d5;
+	color: #777;
+}
+
+.fileUploadImg .fileWrap2 {
+	position: relative;
+	top: 2px;
+	left: 1px;
+	display: inline-block;
+	width: 56px;
+	height: 24px;
+	background: url("/images/common/btn_file_find.png") no-repeat 0 0 / contain;
+	text-align: center;
+}
+
+.fileUploadImg .fileAdd {
+	filter: alpha(opacity: 0);
+	opacity: 0;
+	width: 50px;
+	height: 21px;
+	padding: 0 0 0 0;
+}
+
+.fileUploadImg .fileWrap {
+	margin: 5px 0;
+}
+
+.fileUploadImg .fileThumb {
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.fileUploadImg .fileThumb p {
 	float: left;
 	margin-right: 10px;
 }

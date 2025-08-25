@@ -118,21 +118,17 @@ export default defineConfig({
       transformIndexHtml(html) {
         // 여러 링크 태그의 href 속성 변경
           return html
+					.replace(
+            /crossorigin href="\/css\/base\.css"/g,
+            'href="../../../css/base.css"'
+          )
+					.replace(
+            /crossorigin href="\/css\/style\.css"/g,
+            'href="../../../css/style.css"'
+          )
           .replace(
             /crossorigin href="\/css\/reset\.css"/g,
             'href="../../../css/reset.css"'
-          )
-          .replace(
-            /crossorigin href="\/css\/common\.css"/g,
-            'href="../../../css/common.css"'
-          )
-          .replace(
-            /crossorigin href="\/css\/contents\.css"/g,
-            'href="../../../css/contents.css"'
-          )
-          .replace(
-            /crossorigin href="\/css\/popup\.css"/g,
-            'href="../../../css/popup.css"'
           )
           .replace(
             /crossorigin href="\/css\/frame\.css"/g,

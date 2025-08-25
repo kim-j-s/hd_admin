@@ -122,7 +122,7 @@
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	width: 160px;
+	width: 190px;
 	height: 100%;
 	padding: 0 16px;
 	overflow: auto;
@@ -147,6 +147,7 @@
 	position: relative;
 	display: block;
 	padding: 12px 0;
+	padding: 12px 20px 12px 0;
 	font-weight: 400;
 	font-size: 14px;
 	color: #1e2124;
@@ -180,6 +181,15 @@
 	-webkit-transform: rotate(0deg);
 	transform: rotate(0deg);
 }
+.hd_menu_dept_lv2 > li .hd_acd_btn.hd_acd_btn_open > .text {
+	padding-right: 0;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn.hd_acd_btn_open > .text::before {
+	content: none;
+}
+.hd_menu_dept_lv2 > li .hd_acd_btn.hd_acd_btn_open > .text::after {
+	content: none;
+}
 .hd_menu_dept_lv2 > li + li .hd_acd_btn {
 	border-top: 1px solid #cdd1d5;
 }
@@ -193,17 +203,22 @@
 .hmd2_dept > li {
 	position: relative;
 }
-.hmd2_dept > li > a {
+.hmd2_dept > li > a,
+.hmd2_dept > li > button {
 	position: relative;
 	display: block;
 	padding-left: 8px;
 	font-size: 12px;
 	line-height: 18px;
 	color: #58616a;
+	border: none;
+	background-color: transparent;
 	-webkit-transition: color 0.3s;
 	transition: color 0.3s;
+	cursor: pointer;
 }
-.hmd2_dept > li > a::before {
+.hmd2_dept > li > a::before,
+.hmd2_dept > li > button::before {
 	content: "";
 	position: absolute;
 	top: 8px;
@@ -215,12 +230,16 @@
 	transition: border-bottom 0.3s;
 }
 .hmd2_dept > li > a:hover,
-.hmd2_dept > li > a.active {
+.hmd2_dept > li > a.active,
+.hmd2_dept > li > button:hover,
+.hmd2_dept > li > button.active {
 	font-weight: 700;
 	color: #f8633c;
 }
 .hmd2_dept > li > a:hover::before,
-.hmd2_dept > li > a.active::before {
+.hmd2_dept > li > a.active::before,
+.hmd2_dept > li > button:hover::before,
+.hmd2_dept > li > button.active::before {
 	background-color: #f8633c;
 }
 .hmd2_dept > li + li {
@@ -277,7 +296,9 @@
 	white-space: nowrap;
 }
 .hd_container .hd_container_tabarea .hd_tab_btn.active {
-	border: 1px solid #cdd1d5;
+	/*눈에 너무 안띄어서 주황색 테두리로 변경해봄. (3depth 메뉴 hover시 텍스트 주황색으로 바뀌는 색과 동일한 색임)*/
+	/*   border: 1px solid #cdd1d5; */
+	border: 1px solid #f8633c;
 	background-color: #fff;
 }
 .hd_container .hd_container_tabarea .hd_tab_btn.active > .text {
@@ -301,6 +322,7 @@
 	cursor: pointer;
 }
 .hd_container .hd_container_content {
+	margin-bottom: 30px;
 	-webkit-box-flex: 1;
 	-ms-flex: 1 1 0px;
 	flex: 1 1 0;
