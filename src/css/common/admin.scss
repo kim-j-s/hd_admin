@@ -43,40 +43,83 @@
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn {
   display: block;
   width: 100%;
+	padding: 0 12px;
   text-align: left;
   border: none;
-  border-top: 1px solid #fff;
+	border-top: 1px solid #58616A;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   cursor: pointer;
 	background-color: transparent;
-}
-.hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn > .text {
-  display: block;
-  padding: 16px;
-  font-size: 14px;
-  line-height: 20px;
-  // color: #1e2124;
-	color: #fff;
 	background-repeat: no-repeat;
 	background-position: right center;
 	transition: background-color 0.3s;
 }
+.hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn > .text {
+  display: block;
+  padding: 16px;
+	padding: 9px 0 9px 26px;
+  font-size: 14px;
+	color: #8A949E;
+  line-height: 1.5;
+	background-repeat: no-repeat;
+	background-position: left center;
+}
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn.active,
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn:hover {
-  border-top: 1px solid #1e2124;
-  background-color: #1e2124;
+  border-top: 1px solid transparent;
+	background-color: #FF7F32;
+	background-image: url(../images/common/bg_hd_menu_dept_lv1_btn.png);
 }
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn.active > .text,
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn:hover > .text {
   font-weight: 700;
-  color: #fff;
-	background-color: #FF7F32;
-	background-image: url(../images/common/bg_hd_menu_dept_lv1_btn.png);
+  color: #fff;	
 }
-.hd_menu_dept_lv1 > li + li > .hd_menu_dept_lv1_btn {
-  border-top: 1px solid #cdd1d5;
+/* 아이콘 적용 */
+.hd_menu_dept_lv1 {
+	> li {
+		[class*="hmd_lv1_ico_"] {
+			// .text {
+			// }
+			// 반복문으로 ty1 ~ ty3 자동 생성
+      @for $i from 1 through 14 {
+        &.hmd_lv1_ico_ty#{$i} {
+					.text {
+						background-image: url("../images/common/hli_ty#{$i}.png");
+					}
+        }
+      }
+      @for $i from 2 through 14 {
+        &.hmd_lv1_ico_ty#{$i} {
+					&.active,
+					&:hover {
+						.text {
+							background-image: url("../images/common/hli_ty#{$i}_on.png");
+						}
+					}
+        }
+      }
+
+			
+
+
+		}
+	}	
 }
+/* 아이콘 적용 */
+
+
+
+
+
+
+
+
+
+
+
+
 .hd_utils {
   -webkit-box-flex: 0;
   -ms-flex: none;
