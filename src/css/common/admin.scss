@@ -34,6 +34,19 @@
 	background-color: #313D4C;
 	box-shadow: 0 18px 50px -10px rgba(0, 0, 0, 0.20);
 }
+
+
+/* 검색어 입력 영역 */
+.hd_utils .hd_utils_logo {
+  display: block;
+  font-size: 0;
+}
+.hd_utils .hd_utils_logo img {
+  display: block;
+}
+/* 검색어 입력 영역 */
+
+/* gnb */
 .hd_menu_dept_lv1 {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 0px;
@@ -108,70 +121,45 @@
 	}	
 }
 /* 아이콘 적용 */
+/* gnb */
 
-
-
-
-
-
-
-
-
-
-
-
+/* 로그아웃 */
 .hd_utils {
   -webkit-box-flex: 0;
   -ms-flex: none;
   flex: none;
-  padding: 16px;
-}
-.hd_utils .hd_utils_logo {
-  display: block;
-  font-size: 0;
-}
-.hd_utils .hd_utils_logo img {
-  display: block;
+  padding: 16px 16px 28px 16px;
 }
 .hd_utils .hd_utils_user {
-  padding: 16px 0;
   font-size: 14px;
-  color: #464c53;
-  line-height: 20px;
-}
-.hd_utils .hd_utils_user > strong {
-  font-weight: 700;
-  color: #e25a37;
+  color: #fff;
+  line-height: 1.5;
 }
 .hd_utils .hd_utils_logout {
+	padding-top: 8px; 
   font-size: 0;
 }
 .hd_utils .hd_utils_logout .btn_logout {
   display: inline-block;
-  background: transparent;
   border: none;
+  background: transparent;
   cursor: pointer;
 }
 .hd_utils .hd_utils_logout .btn_logout > .text {
   display: block;
-  padding: 2px 10px;
+  padding: 2px 9px;
   font-weight: 400;
   font-size: 12px;
-  line-height: 18px;
+	color: #fff;
+  line-height: 1.5;
   border-radius: 10px;
   border: 1px solid #b1b8be;
-  background-color: #fff;
 }
+/* 로그아웃 */
+
 .hd_aside_v2 {
-  -webkit-box-flex: 0;
-  -ms-flex: none;
   flex: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   width: 190px;
   height: 100%;
@@ -202,7 +190,7 @@
   font-weight: 400;
   font-size: 14px;
   color: #1e2124;
-  line-height: 20px;
+  line-height: 1.5;
   text-align: left;
 }
 .hd_menu_dept_lv2 > li .hd_acd_btn > .text::before {
@@ -260,7 +248,7 @@
   display: block;
   padding-left: 8px;
   font-size: 12px;
-  line-height: 18px;
+  line-height: 1.5;
   color: #58616a;
   border: none;
   background-color: transparent;
@@ -342,7 +330,7 @@
 .hd_container .hd_container_tabarea .hd_tab_btn > .text {
   display: block;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 1.5;
   color: #6d7882;
   white-space: nowrap;
 }
