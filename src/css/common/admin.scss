@@ -1,3 +1,74 @@
+
+/* input */
+.hd_admin_input {
+	position: relative;
+	input {
+		display: block;
+		width: 100%;
+		height: 40px;
+		padding: 0 15px;
+		font-size: 14px;
+		color: #1E2124;
+		border-radius: 12px;
+		border: 1px solid #8A949E;
+		background-color: #fff;
+		box-sizing: border-box;
+		&::placeholder {
+			font-size: 14px;
+			color: #8A949E;
+		}
+	}
+
+	/* 검색 */
+	&.hai_search {
+		input {
+			padding-right: 50px;
+		}
+		.hda_btn_search {
+			position: absolute;
+			top: 50%;
+			right: 16px;
+			transform: translateY(-50%);
+		}
+
+	}
+	/* 검색 */
+
+	&.big {
+		input {
+			height: 56px;
+			font-size: 16px;
+		}
+	}
+}
+/* input */
+
+/* button */
+.hda_btn {
+	display: inline-flex;
+	outline: none;
+	cursor: pointer;
+	color: inherit;
+	text-align: initial;
+	border: none;
+	background-color: transparent;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	&.hda_btn_search {
+		width: 20px;
+		height: 20px;
+		background: url(../images/common/icon_search.png) no-repeat center center;
+		.text {
+			line-height: normal;
+			font-size: 0;
+		}		
+	}
+}
+/* button */
+
+
+
 /* admin */
 .hd_wrap {
   display: -webkit-box;
@@ -107,7 +178,6 @@
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn > .text {
   display: block;
   padding: 16px;
-	// padding: 9px 0 9px 26px;
 	padding: 10px 0 9px 26px;
   font-size: 14px;
 	color: #8A949E;
@@ -117,7 +187,6 @@
 }
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn.active,
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn:hover {
-  // border-top: 1px solid transparent;
 	background-color: #FF7F32;
 	background-image: url(../images/common/bg_hd_menu_dept_lv1_btn.png);
 	&::before {
@@ -139,7 +208,7 @@
       @for $i from 1 through 14 {
         &.hmd_lv1_ico_ty#{$i} {
 					.text {
-						background-image: url("../images/common/hli_ty#{$i}.png");
+						background-image: url("../images/common/icon_hli_ty#{$i}.png");
 					}
         }
       }
@@ -148,15 +217,11 @@
 					&.active,
 					&:hover {
 						.text {
-							background-image: url("../images/common/hli_ty#{$i}_on.png");
+							background-image: url("../images/common/icon_hli_ty#{$i}_on.png");
 						}
 					}
         }
       }
-
-			
-
-
 		}
 	}	
 }
@@ -415,63 +480,114 @@
 
 // icon_search
 
-/* input */
-.hd_admin_input {
-	position: relative;
-	input {
-		display: block;
-		width: 100%;
-		height: 40px;
-		padding: 0 15px;
-		font-size: 14px;
-		color: #1E2124;
-		border-radius: 12px;
-		border: 1px solid #8A949E;
-		background-color: #fff;
-		box-sizing: border-box;
-		&::placeholder {
-			font-size: 14px;
-			color: #8A949E;
+
+
+
+
+
+
+
+
+
+/* 로그인 */
+.hd_admin_login {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	min-width: 970px;
+	height: 100%;
+	padding-top: 150px;
+	background: #313d4c url(../images/common/bg_login_content.png) no-repeat right top;
+
+	.hal_inner {
+		width: 970px;
+		font-size: 0;
+
+
+		.hal_left {
+			display: inline-block;
+			vertical-align: top;
+			width: 520px;
+
+			.hal_logo {
+				font-size: 0;
+				img {
+					display: block;
+				}
+			}
+
+			.hal_subtxt_ty1 {
+				padding-top: 16px;
+				font-size: 36px;
+				color: #FFF;
+				line-height: 1.5;
+			}
+			.hal_subtxt_ty2 {
+				margin-top: 16px;
+				padding-left: 20px;
+				font-size: 16px;
+				line-height: 1.5;
+				color: #8A949E;
+				background: url(../images/common/icon_noti.png) no-repeat left top 3px;
+			}
+
+
+		}
+
+		.hal_right {
+			display: inline-block;
+			vertical-align: top;
+			width: 450px;
+			padding: 32px 24px 40px 24px;
+			border-radius: 28px;
+			background-color: #fff;
+			box-sizing: border-box;
+
+			.hd_login_title {
+				font-weight: 700;
+				font-size: 32px;
+				color: #B1B8BE;
+				line-height: 1.5;
+			}
+
+			.hal_login_input {
+				> li {
+					display: flex;
+					align-items: center;
+					.label {
+						flex: none;
+						width: 64px;
+						font-size: 16px;
+						color: #1E2124;
+					}
+					.ipt {
+						flex: 1 1 0;
+
+					}
+					+ li {
+						display: flex;
+						align-items: center;
+						margin-top: 16px;
+						
+					}
+				}
+			}
 		}
 	}
 
-	/* 검색 */
-	&.hai_search {
-		input {
-			padding-right: 50px;
-		}
-		.hda_btn_search {
-			position: absolute;
-			top: 50%;
-			right: 16px;
-			transform: translateY(-50%);
-		}
 
+	// copy
+	.hd_admin_login_copy {
+		position: fixed;
+		bottom: 34px;
+		left: 50%;
+		font-size: var(--font-size-body-medium, 16px);
+		color: var(--color-text-disabled-on, #6D7882);
+		line-height: 150%; /* 24px */
+		transform: translateX(-50%);
 	}
-	/* 검색 */
 }
-/* input */
-
-/* button */
-.hda_btn {
-	display: inline-flex;
-	outline: none;
-	cursor: pointer;
-	color: inherit;
-	text-align: initial;
-	border: none;
-	background-color: transparent;
-	-webkit-appearance: none;
-	appearance: none;
-	-webkit-tap-highlight-color: transparent;
-	&.hda_btn_search {
-		width: 20px;
-		height: 20px;
-		background: url(../images/common/icon_search.png) no-repeat center center;
-		.text {
-			line-height: normal;
-			font-size: 0;
-		}		
-	}
-}
-/* button */
+/* 로그인 */
