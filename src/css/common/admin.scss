@@ -17,6 +17,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+	line-height: 1.5;
 }
 .hd_aside_v1 {
   -webkit-box-flex: 0;
@@ -37,6 +38,26 @@
 
 
 /* 검색어 입력 영역 */
+.hd_aside_v1_top {
+	padding: 20px 12px 12px 12px;
+	.hd_admin_title {
+		display: flex;
+		align-items: center;
+		padding-left: 4px;
+		font-weight: 700;
+		font-size: 12px;
+		color: #fff;
+		img {
+			width: 114px;
+		}
+	}
+	.hd_admin_search {
+		padding-top: 20px;
+
+	}
+}
+
+
 .hd_utils .hd_utils_logo {
   display: block;
   font-size: 0;
@@ -54,24 +75,40 @@
   overflow: auto;
 }
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn {
+	position: relative;
   display: block;
   width: 100%;
 	padding: 0 12px;
   text-align: left;
   border: none;
-	border-top: 1px solid #58616A;
+	// border-top: 1px solid #58616A;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  cursor: pointer;
 	background-color: transparent;
 	background-repeat: no-repeat;
 	background-position: right center;
 	transition: background-color 0.3s;
+	cursor: pointer;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		border-top: 1px solid #58616A;
+		pointer-events: none;
+	}
+	&.default_active {
+		.text {
+			color: #fff;
+		}
+	}
 }
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn > .text {
   display: block;
   padding: 16px;
-	padding: 9px 0 9px 26px;
+	// padding: 9px 0 9px 26px;
+	padding: 10px 0 9px 26px;
   font-size: 14px;
 	color: #8A949E;
   line-height: 1.5;
@@ -80,9 +117,12 @@
 }
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn.active,
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn:hover {
-  border-top: 1px solid transparent;
+  // border-top: 1px solid transparent;
 	background-color: #FF7F32;
 	background-image: url(../images/common/bg_hd_menu_dept_lv1_btn.png);
+	&::before {
+		border-top: 1px solid transparent;
+	}
 }
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn.active > .text,
 .hd_menu_dept_lv1 > li > .hd_menu_dept_lv1_btn:hover > .text {
@@ -185,7 +225,6 @@
 .hd_menu_dept_lv2 > li .hd_acd_btn > .text {
   position: relative;
   display: block;
-  padding: 12px 0;
   padding: 12px 20px 12px 0;
   font-weight: 400;
   font-size: 14px;
@@ -247,9 +286,9 @@
   position: relative;
   display: block;
   padding-left: 8px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
-  color: #58616a;
+  color: #1E2124;
   border: none;
   background-color: transparent;
   -webkit-transition: color 0.3s;
@@ -260,12 +299,10 @@
 .hmd2_dept > li > button::before {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 10px;
   left: 0;
-  width: 2px;
-  border-bottom: 2px solid #58616a;
-  border-radius: 50%;
-  -webkit-transition: border-bottom 0.3s;
+  width: 4px;
+  border-bottom: 1px solid #464C53;
   transition: border-bottom 0.3s;
 }
 .hmd2_dept > li > a:hover,
@@ -273,7 +310,7 @@
 .hmd2_dept > li > button:hover,
 .hmd2_dept > li > button.active {
   font-weight: 700;
-  color: #f8633c;
+  color: #E25A37;
 }
 .hmd2_dept > li > a:hover::before,
 .hmd2_dept > li > a.active::before,
@@ -374,3 +411,67 @@
 /* hd_container */
 
 
+
+
+// icon_search
+
+/* input */
+.hd_admin_input {
+	position: relative;
+	input {
+		display: block;
+		width: 100%;
+		height: 40px;
+		padding: 0 15px;
+		font-size: 14px;
+		color: #1E2124;
+		border-radius: 12px;
+		border: 1px solid #8A949E;
+		background-color: #fff;
+		box-sizing: border-box;
+		&::placeholder {
+			font-size: 14px;
+			color: #8A949E;
+		}
+	}
+
+	/* 검색 */
+	&.hai_search {
+		input {
+			padding-right: 50px;
+		}
+		.hda_btn_search {
+			position: absolute;
+			top: 50%;
+			right: 16px;
+			transform: translateY(-50%);
+		}
+
+	}
+	/* 검색 */
+}
+/* input */
+
+/* button */
+.hda_btn {
+	display: inline-flex;
+	outline: none;
+	cursor: pointer;
+	color: inherit;
+	text-align: initial;
+	border: none;
+	background-color: transparent;
+	-webkit-appearance: none;
+	appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	&.hda_btn_search {
+		width: 20px;
+		height: 20px;
+		background: url(../images/common/icon_search.png) no-repeat center center;
+		.text {
+			line-height: normal;
+			font-size: 0;
+		}		
+	}
+}
+/* button */
