@@ -134,6 +134,18 @@
 			font-size: 18px;
 		}
 	}
+	&.hda_btn_Favorites {
+		display: inline-flex;
+		width: 24px;
+		height: 24px;
+		background: url(../images/common/icon_favorite.png) no-repeat center center;
+		> span {
+			font-size: 0;
+		}
+		&.active {
+			background: url(../images/common/icon_favorite_on.png) no-repeat center center;
+		}
+	}
 }
 /* button */
 
@@ -690,3 +702,38 @@
 	}
 }
 /* 로그인 */
+
+
+
+
+.hda_title_div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 0 24px;
+	margin-bottom: 30px;
+	padding-bottom: 8px;
+	border-bottom: 2px solid #8c8c8c;
+	box-sizing: border-box;
+
+	.hda_title_div_l {
+		flex: 1 1 0;
+		display: inline-flex;
+		align-items: center;
+		gap: 0 4px;
+		.hda_title {
+			h3 {
+				font-weight: bold;
+				font-size: 18px;
+				color: #333;
+				line-height: 1.5;
+			}
+		}
+	}
+	.hda_title_div_r {
+		flex: none;		
+		justify-content: flex-end;
+	}
+
+
+}

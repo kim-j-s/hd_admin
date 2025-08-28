@@ -144,6 +144,20 @@
 	font-weight: 700;
 	font-size: 18px;
 }
+.hda_btn.hda_btn_Favorites {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	width: 24px;
+	height: 24px;
+	background: url(../images/common/icon_favorite.png) no-repeat center center;
+}
+.hda_btn.hda_btn_Favorites > span {
+	font-size: 0;
+}
+.hda_btn.hda_btn_Favorites.active {
+	background: url(../images/common/icon_favorite_on.png) no-repeat center center;
+}
 /* button */
 /* admin */
 .hd_wrap {
@@ -749,3 +763,46 @@
 	transform: translateX(-50%);
 }
 /* 로그인 */
+.hda_title_div {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	gap: 0 24px;
+	margin-bottom: 30px;
+	padding-bottom: 8px;
+	border-bottom: 2px solid #8c8c8c;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.hda_title_div .hda_title_div_l {
+	-webkit-box-flex: 1;
+	-ms-flex: 1 1 0px;
+	flex: 1 1 0;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	gap: 0 4px;
+}
+.hda_title_div .hda_title_div_l .hda_title h3 {
+	font-weight: bold;
+	font-size: 18px;
+	color: #333;
+	line-height: 1.5;
+}
+.hda_title_div .hda_title_div_r {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+}
